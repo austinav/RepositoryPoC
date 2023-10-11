@@ -6,9 +6,11 @@ using System.Linq.Expressions;
 namespace RepositoryPoC.Repository.Abstractions
 {
     /// <summary>
-    /// Defines the contract for All Repositories at the consistent abstract high-level. It should not matter what the data source is: database, web api, json, etc. The 
-    /// implementation of this interface will differ based on source, but interacting with data should be the same and be based on normalized object model that 
-    /// makes sense for the actual semantic context.
+    /// Defines the contract for All Repositories at the consistent abstract high-level. 
+    /// It should not matter what the data source is: database, web api, json, etc. 
+    /// The implementation of this interface will differ based on source, 
+    ///  but interacting with data should be the same and be based on normalized object model that 
+    ///  makes sense for the actual semantic context.
     /// </summary>
     /// <typeparam name="TEntity"></typeparam>
     /// <typeparam name="Tdto"></typeparam>
@@ -16,9 +18,12 @@ namespace RepositoryPoC.Repository.Abstractions
     {
         void Delete(object id);
         void Delete(Tdto entityToDelete);
+        void Delete(IEnumerable<Tdto> entitiesToDelete);
         IEnumerable<Tdto> Get(Expression<Func<Tdto, bool>> filter = null, Func<IQueryable<Tdto>, IOrderedQueryable<Tdto>> orderBy = null, string includeProperties = "");
         //Tdto GetByID(object id);
         void Insert(Tdto entity);
+        void Insert(IEnumerable<Tdto> entitites);
         void Update(Tdto entityToUpdate);
+        void Update(IEnumerable<Tdto> entitiesToUpdate);
     }
 }

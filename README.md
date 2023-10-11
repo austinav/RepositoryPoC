@@ -24,4 +24,5 @@ General concerns include:
 ## End goal looks like
 
 Only creating domain classes (of course) and data classes (to create the database or generated from the database),
-and providing a lightweight mapping configuration from data classes (Entities) to domain and/or data transfer objects.
+and providing a lightweight mapping configuration from data classes (Entities) to domain and/or data transfer objects. 
+Optional features should be clear on how to implement and would require extra configurations associated with their aims.

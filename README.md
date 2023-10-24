@@ -55,6 +55,9 @@ public class GenericRepository<TEntity> where TEntity : class
 internal SchoolContext context;
 internal DbSet<TEntity> dbSet;
 
+//This is another clue that maybe generics are not the way to go
+//The Entity is based on generic typing compilation, but then this repo needs a specific context (which has specific entities)?
+//Some generic repos take the parent class DbContext, which would be better.
 public GenericRepository(SchoolContext context)
 {
     this.context = context;

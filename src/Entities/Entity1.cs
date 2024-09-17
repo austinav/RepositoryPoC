@@ -16,6 +16,6 @@ namespace RepositoryPoC.Entities
 
         public int? Entity2_Id { get; set; }
 
-        public virtual Entity2 Entity2 { get; set; }
+        public virtual Entity2? Entity2 { get; set; }
     }
 }

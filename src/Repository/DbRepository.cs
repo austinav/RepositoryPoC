@@ -112,6 +112,21 @@ namespace RepositoryPoC.EmailService.Repo
             return _mapper.Map<IEnumerable<Tdto>>(dbSet.AsEnumerable()).GetEnumerator();
         }
 
+        void IRepository<Tdto>.Delete(IEnumerable<Tdto> entitiesToDelete)
+        {
+            throw new NotImplementedException();
+        }
+
+        void IRepository<Tdto>.Insert(IEnumerable<Tdto> entitites)
+        {
+            throw new NotImplementedException();
+        }
+
+        void IRepository<Tdto>.Update(IEnumerable<Tdto> entitiesToUpdate)
+        {
+            throw new NotImplementedException();
+        }
+
         public Expression Expression => throw new NotImplementedException();
 
         public Type ElementType => throw new NotImplementedException();
